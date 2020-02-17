@@ -35,11 +35,15 @@ set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
 
 " ALE
 let g:ale_linters = {
-\ 'python': ['flake8', 'pyls']
+\	'python': ['flake8', 'pyls'],
+\	'javascript': ['eslint'],
+\	'java': ['javac']
 \}
+" 'java': [checkstyle]
 let g:ale_fixers = {
 \	'*': ['remove_trailing_lines', 'trim_whitespace'],
 \	'python': ['autopep8'],
+\	'javascript': ['eslint']
 \}
 let g:ale_python_autopep8_options = '--aggressive --aggressive'
 let g:ale_fix_on_save = 1
